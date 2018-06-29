@@ -5,3 +5,5 @@ home-assistant\.log
 secrets\.yaml
 tts/
 \.cloud/
+entity_registry\.yaml
+plex\.conf
