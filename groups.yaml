@@ -4,4 +4,4 @@ hue_lights_group:
     - light.bedroom_light
     - light.lounge_light
     - light.workbench_light
-    
+    - light.hue_white_lamp_1

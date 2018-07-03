@@ -13,7 +13,11 @@ light.lounge_light:
 light.workbench_light:
   friendly_name: Workbench
   icon: mdi:desk-lamp
-
+  
+light.hue_white_lamp_1:
+  friendly_name: Deck
+  icon: mdi:floor-plan
+  
 # Hiding
 light.lounge:
   hidden: true
@@ -23,3 +27,7 @@ light.workbench:
   
 light.bedroom:
    hidden: true
+
+light.deck:
+  hidden: true
+
