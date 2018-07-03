@@ -7,3 +7,4 @@ tts/
 \.cloud/
 entity_registry\.yaml
 plex\.conf
+\.config_entries\.json

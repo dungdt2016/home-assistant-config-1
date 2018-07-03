@@ -1,0 +1,7 @@
+hue_lights_group:
+  name: Hue Lights
+  entities:
+    - light.bedroom_light
+    - light.lounge_light
+    - light.workbench_light
+    

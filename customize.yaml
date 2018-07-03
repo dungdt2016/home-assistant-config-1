@@ -1,0 +1,25 @@
+# ============================================================================= 
+# Lights 
+# ============================================================================= 
+
+light.bedroom_light:
+  friendly_name: Bedroom
+  icon: mdi:hotel
+  
+light.lounge_light:
+  friendly_name: Lounge
+  icon: mdi:floor-lamp
+
+light.workbench_light:
+  friendly_name: Workbench
+  icon: mdi:desk-lamp
+
+# Hiding
+light.lounge:
+  hidden: true
+  
+light.workbench:
+  hidden: true
+  
+light.bedroom:
+   hidden: true
