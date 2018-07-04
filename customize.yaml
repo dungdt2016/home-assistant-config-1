@@ -31,3 +31,18 @@ light.bedroom:
 light.deck:
   hidden: true
 
+# ============================================================================= 
+# Internet 
+# =============================================================================
+sensor.speedtest_download:
+  friendly_name: Download Speed
+  icon: mdi:cloud-download
+
+sensor.speedtest_upload:
+  friendly_name: Upload Speed
+  icon: mdi:cloud-upload
+  
+sensor.speedtest_ping:
+  friendly_name: Ping
+  icon: mdi:mixcloud
+

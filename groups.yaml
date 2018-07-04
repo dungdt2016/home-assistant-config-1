@@ -5,3 +5,10 @@ hue_lights_group:
     - light.lounge_light
     - light.workbench_light
     - light.hue_white_lamp_1
+
+internet_speed:
+  name: Internet Speed
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
