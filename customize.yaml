@@ -18,6 +18,10 @@ light.hue_white_lamp_1:
   friendly_name: Deck
   icon: mdi:floor-plan
   
+light.hue_white_lamp_1_2:
+  friendly_name: Dining Room
+  icon: mdi:silverware
+  
 # Hiding
 light.lounge:
   hidden: true
@@ -29,6 +33,9 @@ light.bedroom:
    hidden: true
 
 light.deck:
+  hidden: true
+  
+light.dining_room:
   hidden: true
 
 # ============================================================================= 

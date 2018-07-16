@@ -5,6 +5,7 @@ hue_lights_group:
     - light.lounge_light
     - light.workbench_light
     - light.hue_white_lamp_1
+    - light.hue_white_lamp_1_2
 
 internet_speed:
   name: Internet Speed
