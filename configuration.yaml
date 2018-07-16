@@ -13,9 +13,6 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
-# Show links to resources in log and frontend
-introduction:
-
 # Enables the frontend
 frontend:
 
@@ -78,6 +75,13 @@ tts:
 
 # Cloud
 cloud:
+
+mqtt:
+  broker: !secret mqtt_host
+  port: !secret mqtt_port
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
+  
 
 group: !include groups.yaml
 automation: !include automations.yaml
