@@ -16,6 +16,9 @@ homeassistant:
 # Enables the frontend
 frontend:
 
+recorder:
+  db_url: !secret db_mysql
+
 # Enables configuration UI
 config:
 
