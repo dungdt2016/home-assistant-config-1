@@ -7,14 +7,14 @@ hue_lights_group:
     - light.hue_white_lamp_1
     - light.hue_white_lamp_1_2
 
-internet_speed:
+internet_speed_group:
   name: Internet Speed
   entities:
     - sensor.speedtest_download
     - sensor.speedtest_upload
     - sensor.speedtest_ping
     
-host_system:
+host_system_group:
   name: Host System
   entities:
     - sensor.disk_use_percent_config
@@ -24,3 +24,9 @@ host_system:
     - sensor.network_in_eth0
     - sensor.network_out_eth0
     - sensor.processor_use
+    
+time_group:
+  name: Date & Time
+  entities:
+    - sensor.world_clock_canada
+    - sensor.world_clock_south_africa

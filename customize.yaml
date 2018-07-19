@@ -74,3 +74,12 @@ device_tracker.google_maps_111184378817367767624:
 device_tracker.google_maps_117179315722226620815:
   friendly_name: Rachel
 
+  
+# ============================================================================= 
+# Dates and Times
+# =============================================================================
+sensor.world_clock_canada:
+  friendly_name: Canada
+  
+sensor.world_clock_south_africa:
+  friendly_name: South Africa
