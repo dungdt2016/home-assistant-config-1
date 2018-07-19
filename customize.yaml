@@ -63,3 +63,13 @@ sensor.speedtest_ping:
   friendly_name: Ping
   icon: mdi:mixcloud
 
+# ============================================================================= 
+# Maps and Tracking
+# =============================================================================
+
+device_tracker.google_maps_111184378817367767624:
+  friendly_name: Richard
+
+device_tracker.google_maps_117179315722226620815:
+  friendly_name: Rachel
+

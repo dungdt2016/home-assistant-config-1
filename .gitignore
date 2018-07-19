@@ -9,3 +9,5 @@ entity_registry\.yaml
 plex\.conf
 \.config_entries\.json
 \.storage/core\.config_entries
+\.google_maps_location_sharing\.cookies
+known_devices\.yaml
