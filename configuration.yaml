@@ -28,6 +28,13 @@ history:
     entities:
       - sensor.world_clock_canada
       - sensor.world_clock_south_africa
+      - light.lounge
+      - light.workbench
+      - light.bedroom
+      - light.deck
+      - light.dining_room
+      - light.office
+      - light.sams_room
     domains:
       - group
 

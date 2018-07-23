@@ -14,13 +14,21 @@ light.workbench_light:
   friendly_name: Workbench
   icon: mdi:desk-lamp
   
-light.hue_white_lamp_1:
+light.deck_light:
   friendly_name: Deck
   icon: mdi:floor-plan
   
-light.hue_white_lamp_1_2:
+light.dining_room_light:
   friendly_name: Dining Room
   icon: mdi:silverware
+  
+light.office_light:
+  friendly_name: Office
+  icon: mdi:laptop
+  
+light.sams_overhead_light:
+  friendly_name: Sam's Room
+  icon: mdi:baby-buggy
   
 # Hiding
 light.lounge:
@@ -37,7 +45,12 @@ light.deck:
   
 light.dining_room:
   hidden: true
+  
+light.office:
+  hidden: true
 
+light.sams_room:
+  hidden: true
 
 # ============================================================================= 
 # Media Players 
