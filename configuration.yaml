@@ -88,6 +88,17 @@ sensor:
     unit_of_measurement: "%"
     value_template: "{{ value_json.value }}"
     
+  - platform: darksky
+    api_key: !secret darksky_api
+    name: DarkSky
+    monitored_conditions:
+      - temperature
+      - cloud_cover
+      - humidity
+      - pressure
+      - temperature_high
+      - temperature_low
+    
 binary_sensor:
   - platform: mqtt
     name: "HASS Phone Charging"

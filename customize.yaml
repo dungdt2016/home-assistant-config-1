@@ -120,3 +120,24 @@ binary_sensor.hass_phone_usb_connected:
   friendly_name: "USB Charging"
   icon: mdi:usb
   
+# ============================================================================= 
+# Weather
+# =============================================================================
+sensor.darksky_cloud_coverage:
+  friendly_name: "Cloud Coverage"
+  
+sensor.darksky_daytime_high_temperature:
+  friendly_name: "Day High"
+  
+sensor.darksky_humidity:
+  friendly_name: "Humidity"
+  
+sensor.darksky_overnight_low_temperature:
+  friendly_name: "Day Low"
+  
+sensor.darksky_pressure:
+  friendly_name: "Pressure"
+  
+sensor.darksky_temperature:
+  friendly_name: "Temperature"
+  

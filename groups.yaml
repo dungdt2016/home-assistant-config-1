@@ -41,3 +41,13 @@ hass_phone_group:
     - binary_sensor.hass_phone_ac_connected
     - binary_sensor.hass_phone_charging
     - binary_sensor.hass_phone_usb_connected
+    
+darksky_group:
+  name: DarkSky
+  entities:
+    - sensor.darksky_temperature
+    - sensor.darksky_humidity
+    - sensor.darksky_daytime_high_temperature
+    - sensor.darksky_overnight_low_temperature
+    - sensor.darksky_pressure
+    - sensor.darksky_cloud_coverage
