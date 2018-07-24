@@ -81,6 +81,41 @@ sensor:
   - platform: worldclock
     time_zone: Africa/Johannesburg
     name: World Clock South Africa
+    
+  - platform: mqtt
+    name: "HASS Phone Battery"
+    state_topic: "wallpanel/hassphone/sensor/battery"
+    unit_of_measurement: "%"
+    value_template: "{{ value_json.value }}"
+    
+binary_sensor:
+  - platform: mqtt
+    name: "HASS Phone Charging"
+    state_topic: "wallpanel/hassphone/sensor/battery"
+    value_template: "{{ value_json.charging }}"
+    payload_on: true
+    payload_off: false
+    
+  - platform: mqtt
+    name: "HASS Phone AC Connected"
+    state_topic: "wallpanel/hassphone/sensor/battery"
+    value_template: "{{ value_json.acPlugged }}"
+    payload_on: true
+    payload_off: false
+    
+  - platform: mqtt
+    name: "HASS Phone Screen On"
+    state_topic: "wallpanel/hassphone/state"
+    value_template: "{{ value_json.screenOn }}"
+    payload_on: true
+    payload_off: false
+    
+  - platform: mqtt
+    name: "HASS Phone USB Connected"
+    state_topic: "wallpanel/hassphone/sensor/battery"
+    value_template: "{{ value_json.usbPlugged }}"
+    payload_on: true
+    payload_off: false
       
 device_tracker:
   - platform: google_maps
