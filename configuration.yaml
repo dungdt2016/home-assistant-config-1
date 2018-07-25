@@ -98,6 +98,13 @@ sensor:
       - pressure
       - temperature_high
       - temperature_low
+      
+  - platform: octoprint
+    name: Anet A8
+    monitored_conditions:
+      - Current State
+      - Temperatures
+      - Job Percentage
     
 binary_sensor:
   - platform: mqtt
@@ -127,7 +134,12 @@ binary_sensor:
     value_template: "{{ value_json.usbPlugged }}"
     payload_on: true
     payload_off: false
-      
+    
+camera:
+  - platform: mjpeg
+    mjpeg_url: http://10.0.0.101/webcam/?action=stream&1532530153491
+    name: "Anet A8"
+    
 device_tracker:
   - platform: google_maps
     username: !secret google_user
@@ -148,6 +160,12 @@ mqtt:
   port: !secret mqtt_port
   username: !secret mqtt_user
   password: !secret mqtt_pass
+  
+octoprint:
+  host: !secret octoprint_host
+  api_key: !secret octoprint_api
+  bed: true
+  number_of_tools: 1
   
 
 group: !include groups.yaml

@@ -141,3 +141,29 @@ sensor.darksky_pressure:
 sensor.darksky_temperature:
   friendly_name: "Temperature"
   
+# ============================================================================= 
+# 3D Printers
+# =============================================================================
+sensor.anet_a8_current_state:
+  friendly_name: Status
+  icon: mdi:printer-3d
+  
+sensor.anet_a8_job_percentage:
+  friendly_name: "Job %"
+  icon: mdi:percent
+  
+sensor.anet_a8_target_bed_temp:
+  friendly_name: "Bed Temp (target)"
+  icon: mdi:vector-square
+  
+sensor.anet_a8_actual_bed_temp:
+  friendly_name: "Bed Temp (actual)"
+  icon: mdi:vector-square
+  
+sensor.anet_a8_actual_tool0_temp:
+  friendly_name: "Tool Temp (actual)"
+  icon: mdi:temperature-celsius
+  
+sensor.anet_a8_target_tool0_temp:
+  friendly_name: "Tool Temp (target)"
+  icon: mdi:temperature-celsius
