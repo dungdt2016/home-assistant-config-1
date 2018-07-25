@@ -33,15 +33,6 @@ time_group:
     - sensor.world_clock_canada
     - sensor.world_clock_south_africa
     
-hass_phone_group:
-  name: HASS Phone
-  entities:
-    - sensor.hass_phone_battery
-    - binary_sensor.hass_phone_screen_on
-    - binary_sensor.hass_phone_ac_connected
-    - binary_sensor.hass_phone_charging
-    - binary_sensor.hass_phone_usb_connected
-    
 darksky_group:
   name: DarkSky
   entities:

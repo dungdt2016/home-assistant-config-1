@@ -98,29 +98,6 @@ sensor.world_clock_south_africa:
   friendly_name: South Africa
   
 # ============================================================================= 
-# HASS Phone
-# =============================================================================
-sensor.hass_phone_battery:
-  friendly_name: "Battery %"
-  icon: mdi:battery-50
-
-binary_sensor.hass_phone_screen_on:
-  friendly_name: "Screen On"  
-  icon: mdi:cellphone-text
-  
-binary_sensor.hass_phone_ac_connected:
-  friendly_name: "AC Charging"
-  icon: mdi:power-plug
-  
-binary_sensor.hass_phone_charging:
-  friendly_name: "Charging"
-  icon: mdi:battery-charging
-  
-binary_sensor.hass_phone_usb_connected:
-  friendly_name: "USB Charging"
-  icon: mdi:usb
-  
-# ============================================================================= 
 # Weather
 # =============================================================================
 sensor.darksky_cloud_coverage:
