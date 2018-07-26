@@ -3,11 +3,13 @@ hue_lights_group:
   entities:
     - light.bedroom_light
     - light.lounge_light
+    - light.lounge_light_2
     - light.workbench_light
     - light.deck_light
     - light.dining_room_light
     - light.office_light
     - light.sams_overhead_light
+    - light.passage_light_a
 
 internet_speed_group:
   name: Internet Speed

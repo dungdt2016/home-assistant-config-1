@@ -7,7 +7,7 @@ light.bedroom_light:
   icon: mdi:hotel
   
 light.lounge_light:
-  friendly_name: Lounge
+  friendly_name: Lounge Lamp
   icon: mdi:floor-lamp
 
 light.workbench_light:
@@ -20,7 +20,7 @@ light.deck_light:
   
 light.dining_room_light:
   friendly_name: Dining Room
-  icon: mdi:silverware
+  icon: mdi:ceiling-light
   
 light.office_light:
   friendly_name: Office
@@ -29,6 +29,14 @@ light.office_light:
 light.sams_overhead_light:
   friendly_name: Sam's Room
   icon: mdi:baby-buggy
+  
+light.lounge_light_2:
+  friendly_name: Lounge Light
+  icon: mdi:television
+  
+light.passage_light_a:
+  friendly_name: Passage Light (A)
+  icon: mdi:cube-unfolded
   
 # Hiding
 light.lounge:
@@ -50,6 +58,9 @@ light.office:
   hidden: true
 
 light.sams_room:
+  hidden: true
+  
+light.passage:
   hidden: true
 
 # ============================================================================= 
