@@ -6,7 +6,7 @@ light.bedroom_light:
   friendly_name: Bedroom
   icon: mdi:hotel
   
-light.lounge_light:
+light.lounge_lamp:
   friendly_name: Lounge Lamp
   icon: mdi:floor-lamp
 
@@ -26,11 +26,11 @@ light.office_light:
   friendly_name: Office
   icon: mdi:laptop
   
-light.sams_overhead_light:
+light.sams_light:
   friendly_name: Sam's Room
   icon: mdi:baby-buggy
   
-light.lounge_light_2:
+light.lounge_light:
   friendly_name: Lounge Light
   icon: mdi:television
   
@@ -42,7 +42,7 @@ light.passage_light_a:
 light.lounge:
   hidden: true
   
-light.workbench:
+light.basement:
   hidden: true
   
 light.bedroom:

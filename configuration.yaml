@@ -35,13 +35,15 @@ history:
       - light.dining_room
       - light.office
       - light.sams_room
+      - sensor.last_boot
+      - sensor.yr_symbol
     domains:
       - group
 
 logbook:
 
 logger:
-  default: debug
+  default: warning
 
 map:
 
