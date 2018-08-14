@@ -9,7 +9,6 @@ views:
             tap_action: toggle
           - entity: light.lounge_lamp
             name: Lounge
-            tap_action: toggle
           - entity: light.bedroom_light
             name: Bedroom
             tap_action: toggle
@@ -39,6 +38,9 @@ views:
           title: Active Lights
           show_state: false
           show_name: true
+          
+      - type: weather-forecast
+        entity: weather.dark_sky
           
       - type: entities
         title: Hue Lights

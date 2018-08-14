@@ -107,6 +107,10 @@ sensor:
       - Current State
       - Temperatures
       - Job Percentage
+      
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api
     
 camera:
 #  - platform: mjpeg
