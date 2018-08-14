@@ -42,11 +42,14 @@ history:
 
 logbook:
   exclude:
-    - sensor.world_clock_south_africa
-    - sensor.world_clock_canada
+    entities:
+      - sensor.world_clock_south_africa
+      - sensor.world_clock_canada
+      - light.bedroom_light
+      - light.bedroom
 
 logger:
-  default: warning
+  default: debug
 
 map:
 
