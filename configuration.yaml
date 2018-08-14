@@ -41,6 +41,9 @@ history:
       - group
 
 logbook:
+  exclude:
+    - sensor.world_clock_south_africa
+    - sensor.world_clock_canada
 
 logger:
   default: warning
@@ -103,9 +106,9 @@ sensor:
       - Job Percentage
     
 camera:
-  - platform: mjpeg
-    mjpeg_url: http://10.0.0.101/webcam/?action=stream&1532530153491
-    name: "Anet A8"
+#  - platform: mjpeg
+#    mjpeg_url: http://10.0.0.101/webcam/?action=stream&1532530153491
+#    name: "Anet A8"
     
 device_tracker:
   - platform: google_maps
