@@ -32,16 +32,6 @@ time_group:
   entities:
     - sensor.world_clock_canada
     - sensor.world_clock_south_africa
-    
-darksky_group:
-  name: DarkSky
-  entities:
-    - sensor.darksky_temperature
-    - sensor.darksky_humidity
-    - sensor.darksky_daytime_high_temperature
-    - sensor.darksky_overnight_low_temperature
-    - sensor.darksky_pressure
-    - sensor.darksky_cloud_coverage
 
 aneta8_group:
   name: Anet A8

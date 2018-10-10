@@ -125,18 +125,7 @@ sensor:
   - platform: worldclock
     time_zone: Africa/Johannesburg
     name: World Clock South Africa
-    
-  - platform: darksky
-    api_key: !secret darksky_api
-    name: DarkSky
-    monitored_conditions:
-      - temperature
-      - cloud_cover
-      - humidity
-      - pressure
-      - temperature_high
-      - temperature_low
-      
+     
   - platform: octoprint
     name: Anet A8
     monitored_conditions:
