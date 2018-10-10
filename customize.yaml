@@ -1,7 +1,55 @@
 # ============================================================================= 
 # Lights 
 # ============================================================================= 
+light.gym:
+  friendly_name: Gym Lights
+  icon: mdi:dumbbell
 
+light.deck_light:
+  friendly_name: Deck
+  icon: mdi:floor-plan
+
+light.workbench_light:
+  friendly_name: Workbench Light
+  icon: mdi:settings
+
+light.office_light:
+  friendly_name: Office Light
+  icon: mdi:remote-desktop
+
+light.lounge_lamp:
+  friendly_name: Lounge Lamp
+  icon: mdi:floor-lamp
+
+light.lounge_light:
+  friendly_name: Lounge Overhead
+  icon: mdi:television-classic
+
+light.sams_light:
+  friendly_name: Sams Light
+  icon: mdi:baby-buggy
+
+# Hiding
+light.gym_light_1:
+  hidden: true
+
+light.gym_light_2:
+  hidden: true
+
+light.gym_light_3:
+  hidden: true
+
+light.lounge:
+  hidden: true
+
+light.office:
+  hidden: true
+
+light.sams_room:
+  hidden: true
+
+light.deck:
+  hidden: true
 
 # ============================================================================= 
 # Media Players 

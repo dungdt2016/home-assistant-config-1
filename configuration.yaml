@@ -70,26 +70,26 @@ logger:
 
 map:
 
-fan:
-  - platform: mqtt
-    command_topic: "cmnd/sonoff_fan/POWER"
-    state_topic: "cmnd/sonoff_fan/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    name: "Bedroom Fan"
+# fan:
+#   - platform: mqtt
+#     command_topic: "cmnd/sonoff_fan/POWER"
+#     state_topic: "cmnd/sonoff_fan/POWER"
+#     payload_on: "ON"
+#     payload_off: "OFF"
+#     name: "Bedroom Fan"
 
 sun:
 
-light:
-  - platform: mqtt
-    name: "D1mini ws2812"
-    command_topic: "cmnd/d1test/power"
-    state_topic: "stat/d1test/POWER"
-    rgb_state_topic: "stat/d1test/color"
-    rgb_command_topic: "cmnd/d1test/color"
-    brightness_state_topic: "stat/d1test/dimmer"
-    brightness_command_topic: "cmnd/d1test/dimmer"
-    retain: false
+# light:
+#   - platform: mqtt
+#     name: "D1mini ws2812"
+#     command_topic: "cmnd/d1test/power"
+#     state_topic: "stat/d1test/POWER"
+#     rgb_state_topic: "stat/d1test/color"
+#     rgb_command_topic: "cmnd/d1test/color"
+#     brightness_state_topic: "stat/d1test/dimmer"
+#     brightness_command_topic: "cmnd/d1test/dimmer"
+#     retain: false
 
 sensor:
   - platform: yr
