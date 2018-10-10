@@ -1,16 +1,3 @@
-hue_lights_group:
-  name: Hue Lights
-  entities:
-    - light.bedroom_light
-    - light.lounge_light
-    - light.lounge_lamp
-    - light.workbench_light
-    - light.deck_light
-    - light.dining_room_light
-    - light.office_light
-    - light.sams_light
-    - light.passage_light_a
-
 internet_speed_group:
   name: Internet Speed
   entities:

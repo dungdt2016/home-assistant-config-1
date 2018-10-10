@@ -9,6 +9,12 @@ homeassistant:
 
 frontend:
 
+weblink:
+  entities:
+    - name: Lovelace
+      url: http://10.0.0.103:8123/lovelace/0
+      icon: mdi:cards-heart
+
 recorder:
   db_url: !secret db_mysql
 
@@ -18,6 +24,17 @@ http:
   api_password: !secret http_password
 
 updater:
+
+#binary_sensor:
+#  - platform: mqtt
+#    state_topic: "tele/RF_Bridge/RESULT"
+#    name: 'Garage Motion'
+#    value_template: '{{value_json.RfReceived.Data}}'
+#    payload_on: '000001'
+#    device_class: motion
+#    optimistic: false
+#    qos: 1
+#    retain: false
 
 discovery:
 
@@ -53,7 +70,26 @@ logger:
 
 map:
 
+fan:
+  - platform: mqtt
+    command_topic: "cmnd/sonoff_fan/POWER"
+    state_topic: "cmnd/sonoff_fan/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+    name: "Bedroom Fan"
+
 sun:
+
+light:
+  - platform: mqtt
+    name: "D1mini ws2812"
+    command_topic: "cmnd/d1test/power"
+    state_topic: "stat/d1test/POWER"
+    rgb_state_topic: "stat/d1test/color"
+    rgb_command_topic: "cmnd/d1test/color"
+    brightness_state_topic: "stat/d1test/dimmer"
+    brightness_command_topic: "cmnd/d1test/dimmer"
+    retain: false
 
 sensor:
   - platform: yr
@@ -111,11 +147,6 @@ sensor:
 weather:
   - platform: darksky
     api_key: !secret darksky_api
-    
-camera:
-#  - platform: mjpeg
-#    mjpeg_url: http://10.0.0.101/webcam/?action=stream&1532530153491
-#    name: "Anet A8"
     
 device_tracker:
   - platform: google_maps

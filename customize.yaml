@@ -2,66 +2,6 @@
 # Lights 
 # ============================================================================= 
 
-light.bedroom_light:
-  friendly_name: Bedroom
-  icon: mdi:hotel
-  
-light.lounge_lamp:
-  friendly_name: Lounge Lamp
-  icon: mdi:floor-lamp
-
-light.workbench_light:
-  friendly_name: Workbench
-  icon: mdi:desk-lamp
-  
-light.deck_light:
-  friendly_name: Deck
-  icon: mdi:floor-plan
-  
-light.dining_room_light:
-  friendly_name: Dining Room
-  icon: mdi:ceiling-light
-  
-light.office_light:
-  friendly_name: Office
-  icon: mdi:laptop
-  
-light.sams_light:
-  friendly_name: Sam's Room
-  icon: mdi:baby-buggy
-  
-light.lounge_light:
-  friendly_name: Lounge Light
-  icon: mdi:television
-  
-light.passage_light_a:
-  friendly_name: Passage Light (A)
-  icon: mdi:cube-unfolded
-  
-# Hiding
-light.lounge:
-  hidden: true
-  
-light.basement:
-  hidden: true
-  
-light.bedroom:
-   hidden: true
-
-light.deck:
-  hidden: true
-  
-light.dining_room:
-  hidden: true
-  
-light.office:
-  hidden: true
-
-light.sams_room:
-  hidden: true
-  
-light.passage:
-  hidden: true
 
 # ============================================================================= 
 # Media Players 
