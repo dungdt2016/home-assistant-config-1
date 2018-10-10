@@ -110,7 +110,6 @@ sensor:
       - type: disk_use_percent
         arg: /config
       - type: memory_use_percent
-      - type: load_1m
       - type: network_in
         arg: eth0
       - type: network_out
@@ -126,12 +125,12 @@ sensor:
     time_zone: Africa/Johannesburg
     name: World Clock South Africa
      
-  - platform: octoprint
-    name: Anet A8
-    monitored_conditions:
-      - Current State
-      - Temperatures
-      - Job Percentage
+  # - platform: octoprint
+  #   name: Anet A8
+  #   monitored_conditions:
+  #     - Current State
+  #     - Temperatures
+  #     - Job Percentage
       
 weather:
   - platform: darksky
@@ -158,11 +157,11 @@ mqtt:
   username: !secret mqtt_user
   password: !secret mqtt_pass
   
-octoprint:
-  host: !secret octoprint_host
-  api_key: !secret octoprint_api
-  bed: true
-  number_of_tools: 1
+# octoprint:
+#   host: !secret octoprint_host
+#   api_key: !secret octoprint_api
+#   bed: true
+#   number_of_tools: 1
   
 
 group: !include groups.yaml

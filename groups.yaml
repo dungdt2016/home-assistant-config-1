@@ -19,13 +19,13 @@ internet_speed_group:
 host_system_group:
   name: Host System
   entities:
-    - sensor.disk_use_percent_config
-    - sensor.last_boot
-    - sensor.load_1m
+    - sensor.processor_use
     - sensor.memory_use_percent
+    - sensor.disk_use_percent_config
     - sensor.network_in_eth0
     - sensor.network_out_eth0
-    - sensor.processor_use
+    - sensor.last_boot
+    
     
 time_group:
   name: Date & Time
@@ -33,22 +33,22 @@ time_group:
     - sensor.world_clock_canada
     - sensor.world_clock_south_africa
 
-aneta8_group:
-  name: Anet A8
-  entities:
-    - sensor.anet_a8_current_state
-    - sensor.anet_a8_job_percentage
-    - sensor.anet_a8_target_bed_temp
-    - sensor.anet_a8_actual_bed_temp
-    - sensor.anet_a8_actual_tool0_temp
-    - sensor.anet_a8_target_tool0_temp
+# aneta8_group:
+#   name: Anet A8
+#   entities:
+#     - sensor.anet_a8_current_state
+#     - sensor.anet_a8_job_percentage
+#     - sensor.anet_a8_target_bed_temp
+#     - sensor.anet_a8_actual_bed_temp
+#     - sensor.anet_a8_actual_tool0_temp
+#     - sensor.anet_a8_target_tool0_temp
 
 # =================== >> Views
-3d_printers_view:
-  name: "3D Printers"
-  view: yes
-  entities:
-    - device_tracker.google_maps_111184378817367767624
-    - device_tracker.google_maps_117179315722226620815
-    - group.aneta8_group
-    - camera.anet_a8
+# 3d_printers_view:
+#   name: "3D Printers"
+#   view: yes
+#   entities:
+#     - device_tracker.google_maps_111184378817367767624
+#     - device_tracker.google_maps_117179315722226620815
+#     - group.aneta8_group
+#     - camera.anet_a8
