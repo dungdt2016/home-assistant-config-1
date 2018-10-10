@@ -67,6 +67,7 @@ logbook:
 
 logger:
   default: debug
+  homeassistant.components.websocket_api: warning
 
 map:
 
