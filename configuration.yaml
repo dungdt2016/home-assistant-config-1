@@ -22,6 +22,11 @@ config:
 
 http:
   api_password: !secret http_password
+  server_port: 443
+  #ssl_certificate: /ssl/fullchain.pem
+  #ssl_key: /ssl/privkey.pem
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
 
 updater:
 
