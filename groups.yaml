@@ -52,3 +52,18 @@ time_group:
 #     - device_tracker.google_maps_117179315722226620815
 #     - group.aneta8_group
 #     - camera.anet_a8
+
+
+
+
+
+
+holiday_lights_view:
+  name: Holiday Lights
+  view: yes
+  icon: mdi:home
+  entities:
+    - input_number.animation_speed
+    - input_select.esp8266
+    - input_select.holiday_led_effect
+    - light.holiday_lights

@@ -25,17 +25,6 @@ http:
 
 updater:
 
-#binary_sensor:
-#  - platform: mqtt
-#    state_topic: "tele/RF_Bridge/RESULT"
-#    name: 'Garage Motion'
-#    value_template: '{{value_json.RfReceived.Data}}'
-#    payload_on: '000001'
-#    device_class: motion
-#    optimistic: false
-#    qos: 1
-#    retain: false
-
 discovery:
 
 conversation:
@@ -67,7 +56,7 @@ logbook:
 
 logger:
   default: debug
-  homeassistant.components.websocket_api: warning
+  #homeassistant.components.websocket_api: warning
 
 map:
 
@@ -81,16 +70,94 @@ map:
 
 sun:
 
-# light:
-#   - platform: mqtt
-#     name: "D1mini ws2812"
-#     command_topic: "cmnd/d1test/power"
-#     state_topic: "stat/d1test/POWER"
-#     rgb_state_topic: "stat/d1test/color"
-#     rgb_command_topic: "cmnd/d1test/color"
-#     brightness_state_topic: "stat/d1test/dimmer"
-#     brightness_command_topic: "cmnd/d1test/dimmer"
-#     retain: false
+light:
+  - platform: mqtt
+    name: "Holiday Lights"
+    command_topic: "bruh/mqttstrip/setpower"
+    state_topic: "bruh/mqttstrip/setpowerpub"
+    rgb_state_topic: "bruh/mqttstrip/setcolorpub"
+    rgb_command_topic: "bruh/mqttstrip/setcolor"
+    brightness_state_topic: "bruh/mqttstrip/setbrightnesspub"
+    brightness_command_topic: "bruh/mqttstrip/setbrightness"
+    optimistic: false
+    
+input_select:
+  holiday_led_effect:
+    name: Holiday LED Effect
+    options:
+      - "Christmas"
+      - "Candy Cane"
+      - "Holly Jolly"
+      - "Valentine"
+      - "Lovey Day"
+      - "St Patty"
+      - "Easter"
+      - "USA"
+      - "Independence"
+      - "Go Blue"
+      - "Hail"
+      - "Touchdown"
+      - "Halloween"
+      - "Punkin"
+      - "Thanksgiving"
+      - "Turkey Day"
+      - "BPM"
+      - "Confetti"
+      - "Cyclon Rainbow"
+      - "Dots"
+      - "Fire"
+      - "Glitter"
+      - "Juggle"
+      - "Lightning"
+      - "Police All"
+      - "Police One"
+      - "Rainbow"
+      - "Rainbow with Glitter"
+      - "Ripple"
+      - "Sinelon"
+      - "Solid"
+      - "Twinkle"
+    initial: "Solid"
+  
+  esp8266:
+    name: ESP8266
+    options:
+      - "mqttstrip"
+      - "strip2"
+    initial: "mqttstrip"
+    
+input_number:
+  animation_speed:
+    name: Animation Speed
+    initial: 150
+    min: 1
+    max: 150
+    step: 10
+    
+automation: 
+  - alias: "Holiday Input Effect"
+    initial_state: True
+    hide_entity: False
+    trigger:
+    - platform: state
+      entity_id: input_select.holiday_led_effect
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "bruh/{{ states('input_select.esp8266') }}/seteffect"
+          payload: '{{ trigger.to_state.state | string }}'
+
+  - alias: "Animation Speed"
+    initial_state: True
+    hide_entity: False
+    trigger:
+      - platform: state
+        entity_id: input_number.animation_speed
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "bruh/{{ states('input_select.esp8266') }}/setanimationspeed"
+          payload: '{{ trigger.to_state.state | int }}'
 
 sensor:
   - platform: yr
@@ -125,13 +192,6 @@ sensor:
   - platform: worldclock
     time_zone: Africa/Johannesburg
     name: World Clock South Africa
-     
-  # - platform: octoprint
-  #   name: Anet A8
-  #   monitored_conditions:
-  #     - Current State
-  #     - Temperatures
-  #     - Job Percentage
       
 weather:
   - platform: darksky
@@ -157,14 +217,7 @@ mqtt:
   port: !secret mqtt_port
   username: !secret mqtt_user
   password: !secret mqtt_pass
-  
-# octoprint:
-#   host: !secret octoprint_host
-#   api_key: !secret octoprint_api
-#   bed: true
-#   number_of_tools: 1
-  
 
 group: !include groups.yaml
-automation: !include automations.yaml
+# automation: !include automations.yaml
 script: !include scripts.yaml
