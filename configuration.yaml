@@ -86,6 +86,16 @@ light:
     brightness_command_topic: "bruh/mqttstrip/setbrightness"
     optimistic: false
     
+  - platform: mqtt
+    name: "Kitchen Lights"
+    command_topic: "bruh/kitchen/setpower"
+    state_topic: "bruh/kitchen/setpowerpub"
+    rgb_state_topic: "bruh/kitchen/setcolorpub"
+    rgb_command_topic: "bruh/kitchen/setcolor"
+    brightness_state_topic: "bruh/kitchen/setbrightnesspub"
+    brightness_command_topic: "bruh/kitchen/setbrightness"
+    optimistic: false
+    
 input_select:
   holiday_led_effect:
     name: Holiday LED Effect
@@ -129,6 +139,7 @@ input_select:
     options:
       - "mqttstrip"
       - "strip2"
+      - "kitchen"
     initial: "mqttstrip"
     
 input_number:
