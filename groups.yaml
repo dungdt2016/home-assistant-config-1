@@ -39,6 +39,14 @@ sonarr_group:
     - sensor.sonarr_series
     - sensor.sonarr_upcoming
     - sensor.sonarr_wanted
+    
+sab_group:
+  name: SABnzbd
+  entities:
+    - sensor.sabnzbd_left
+    - sensor.sabnzbd_queue_count
+    - sensor.sabnzbd_speed
+    - sensor.sabnzbd_status
 
 # aneta8_group:
 #   name: Anet A8
@@ -65,8 +73,8 @@ sonarr_group:
 
 
 
-holiday_lights_view:
-  name: Holiday Lights
+all_lights_view:
+  name: All Lights
   view: yes
   icon: mdi:lightbulb-on-outline
   entities:
@@ -75,6 +83,7 @@ holiday_lights_view:
     - input_select.holiday_led_effect
     - light.holiday_lights
     - light.kitchen_lights
+    - group.hue_lights_group
     
 internet_view:
   name: Internet
@@ -83,3 +92,4 @@ internet_view:
   entities:
     - group.internet_speed_group
     - group.sonarr_group
+    - group.sab_group
