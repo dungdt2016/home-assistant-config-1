@@ -208,6 +208,17 @@ sensor:
   - platform: worldclock
     time_zone: Africa/Johannesburg
     name: World Clock South Africa
+    
+  - platform: sonarr
+    host: !secret sonarr_host
+    api_key: !secret sonarr_api
+    port: !secret sonarr_port
+    monitored_conditions:
+      - upcoming
+      - wanted
+      - series
+      - diskspace
+    unit: GB
       
 weather:
   - platform: darksky

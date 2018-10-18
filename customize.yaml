@@ -143,3 +143,18 @@ sensor.anet_a8_actual_tool0_temp:
 sensor.anet_a8_target_tool0_temp:
   friendly_name: "Tool Temp (target)"
   icon: mdi:temperature-celsius
+  
+# ============================================================================= 
+# Internet
+# =============================================================================
+sensor.sonarr_wanted:
+  friendly_name: "Wanted"
+  icon: mdi:call-missed
+
+sensor.sonarr_upcoming:
+  friendly_name: "Upcomming"
+  icon: mdi:calendar-range
+  
+
+
+
