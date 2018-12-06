@@ -17,3 +17,13 @@ internet_view:
     - group.internet_speed_group
     - group.sonarr_group
     - group.sab_group
+
+speakers_view:
+  name: Speakers
+  icon: mdi:speaker
+  view: yes
+  entities:
+    - media_player.bedroom_speaker
+    - media_player.gym_speaker
+    - media_player.lounge_speaker
+    - media_player.sams_room_speaker
