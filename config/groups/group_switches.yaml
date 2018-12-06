@@ -3,4 +3,4 @@ sonoff_group:
   entities:
     - switch.xmas_lights
     - switch.window_lights
-
+    - switch.sonoff_mini

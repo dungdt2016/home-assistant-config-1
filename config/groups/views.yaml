@@ -36,3 +36,5 @@ printers_view:
     - group.anet_a8_temps_group
     - group.anet_a8_job_group
     - camera.anet_a8
+    - group.printer_switches_group
+    - weblink.anet_a8

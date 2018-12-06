@@ -1,4 +1,7 @@
 entities:
-  - name: Lovelace
+  - name: "Lovelace"
     url: http://10.0.0.103:8123/lovelace/0
     icon: mdi:cards-heart
+  - name: "Anet A8"
+    url: !secret octoprint_a8_web
+    icon: mdi:printer-3d

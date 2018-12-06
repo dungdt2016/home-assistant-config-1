@@ -170,3 +170,7 @@ switch.xmas_lights:
 switch.window_lights:
   friendly_name: "Bedroom Lights"
   icon: mdi:window-closed
+
+switch.sonoff_mini:
+  friendly_name: "Stair Lights"
+  icon: mdi:stairs
