@@ -1,0 +1,9 @@
+platform: mqtt
+name: "Bedroom"
+command_topic: "bruh/bedroom/setpower"
+state_topic: "bruh/bedroom/setpowerpub"
+rgb_state_topic: "bruh/bedroom/setcolorpub"
+rgb_command_topic: "bruh/bedroom/setcolor"
+brightness_state_topic: "bruh/bedroom/setbrightnesspub"
+brightness_command_topic: "bruh/bedroom/setbrightness"
+optimistic: false

@@ -1,179 +1,25 @@
 homeassistant: !include config/homeassistant.yaml
-
-frontend:
-
-weblink:
-  entities:
-    - name: Lovelace
-      url: http://10.0.0.103:8123/lovelace/0
-      icon: mdi:cards-heart
-
-recorder:
-  db_url: !secret db_mysql
-
-config:
-
 http: !include config/http.yaml
 
+frontend:
+config:
 updater:
-
 discovery:
-
 conversation:
-
 map:
-
 sun:
 
+weblink: !include config/web_links.yaml
+recorder: !include config/recorder.yaml
 history: !include config/history.yaml
 logbook: !include config/logbook.yaml
 logger: !include config/logger.yaml
 switch: !include_dir_list config/switches
-
-light:
-  - platform: mqtt
-    name: "Bedroom"
-    command_topic: "bruh/bedroom/setpower"
-    state_topic: "bruh/bedroom/setpowerpub"
-    rgb_state_topic: "bruh/bedroom/setcolorpub"
-    rgb_command_topic: "bruh/bedroom/setcolor"
-    brightness_state_topic: "bruh/bedroom/setbrightnesspub"
-    brightness_command_topic: "bruh/bedroom/setbrightness"
-    optimistic: false
-    
-  - platform: mqtt
-    name: "Kitchen Lights"
-    command_topic: "bruh/kitchen/setpower"
-    state_topic: "bruh/kitchen/setpowerpub"
-    rgb_state_topic: "bruh/kitchen/setcolorpub"
-    rgb_command_topic: "bruh/kitchen/setcolor"
-    brightness_state_topic: "bruh/kitchen/setbrightnesspub"
-    brightness_command_topic: "bruh/kitchen/setbrightness"
-    optimistic: false
-    
-input_select:
-  holiday_led_effect:
-    name: Holiday LED Effect
-    options:
-      - "Christmas"
-      - "Candy Cane"
-      - "Holly Jolly"
-      - "Valentine"
-      - "Lovey Day"
-      - "St Patty"
-      - "Easter"
-      - "USA"
-      - "Independence"
-      - "Go Blue"
-      - "Hail"
-      - "Touchdown"
-      - "Halloween"
-      - "Punkin"
-      - "Thanksgiving"
-      - "Turkey Day"
-      - "BPM"
-      - "Confetti"
-      - "Cyclon Rainbow"
-      - "Dots"
-      - "Fire"
-      - "Glitter"
-      - "Juggle"
-      - "Lightning"
-      - "Police All"
-      - "Police One"
-      - "Rainbow"
-      - "Rainbow with Glitter"
-      - "Ripple"
-      - "Sinelon"
-      - "Solid"
-      - "Twinkle"
-    initial: "Solid"
-  
-  esp8266:
-    name: ESP8266
-    options:
-      - "kitchen"
-      - "bedroom"
-    initial: "kitchen"
-    
-input_number:
-  animation_speed:
-    name: Animation Speed
-    initial: 150
-    min: 1
-    max: 150
-    step: 5
-    
-automation: 
-  - alias: "Holiday Input Effect"
-    initial_state: True
-    hide_entity: False
-    trigger:
-    - platform: state
-      entity_id: input_select.holiday_led_effect
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: "bruh/{{ states('input_select.esp8266') }}/seteffect"
-          payload: '{{ trigger.to_state.state | string }}'
-
-  - alias: "Animation Speed"
-    initial_state: True
-    hide_entity: False
-    trigger:
-      - platform: state
-        entity_id: input_number.animation_speed
-    action:
-      - service: mqtt.publish
-        data_template:
-          topic: "bruh/{{ states('input_select.esp8266') }}/setanimationspeed"
-          payload: '{{ trigger.to_state.state | int }}'
-
-sensor:
-  - platform: yr
-  
-  - platform: speedtest
-    monitored_conditions:
-      - ping
-      - download
-      - upload
-    minute:
-      - 0
-      - 15
-      - 30
-      - 45
-      
-  - platform: systemmonitor
-    resources:
-      - type: disk_use_percent
-        arg: /config
-      - type: memory_use_percent
-      - type: network_in
-        arg: eth0
-      - type: network_out
-        arg: eth0
-      - type: processor_use
-      - type: last_boot
-      
-  - platform: worldclock
-    time_zone: Canada/Mountain
-    name: World Clock Canada
-    
-  - platform: worldclock
-    time_zone: Africa/Johannesburg
-    name: World Clock South Africa
-    
-  - platform: sonarr
-    host: !secret sonarr_host
-    api_key: !secret sonarr_api
-    port: !secret sonarr_port
-    monitored_conditions:
-      - upcoming
-      - wanted
-      - series
-      - diskspace
-    unit: GB
-      
+light: !include_dir_list config/lights
+input_select: !include config/input_selects.yaml
+input_number: !include config/input_numbers.yaml
+automation: !include_dir_list config/automations
+sensor: !include_dir_list config/sensors
 weather: !include config/weather.yaml
 device_tracker: !include config/device_tracker.yaml
 zone: !include config/zones.yaml

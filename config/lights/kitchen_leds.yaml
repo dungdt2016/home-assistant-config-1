@@ -1,0 +1,9 @@
+platform: mqtt
+name: "Kitchen Lights"
+command_topic: "bruh/kitchen/setpower"
+state_topic: "bruh/kitchen/setpowerpub"
+rgb_state_topic: "bruh/kitchen/setcolorpub"
+rgb_command_topic: "bruh/kitchen/setcolor"
+brightness_state_topic: "bruh/kitchen/setbrightnesspub"
+brightness_command_topic: "bruh/kitchen/setbrightness"
+optimistic: false

@@ -1,0 +1,11 @@
+alias: "Holiday Input Effect"
+initial_state: True
+hide_entity: False
+trigger:
+- platform: state
+  entity_id: input_select.holiday_led_effect
+action:
+  - service: mqtt.publish
+    data_template:
+      topic: "bruh/{{ states('input_select.esp8266') }}/seteffect"
+      payload: '{{ trigger.to_state.state | string }}'

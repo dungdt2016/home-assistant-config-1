@@ -1,0 +1,4 @@
+entities:
+  - name: Lovelace
+    url: http://10.0.0.103:8123/lovelace/0
+    icon: mdi:cards-heart
