@@ -47,27 +47,19 @@ sab_group:
     - sensor.sabnzbd_queue_count
     - sensor.sabnzbd_speed
     - sensor.sabnzbd_status
-
-# aneta8_group:
-#   name: Anet A8
-#   entities:
-#     - sensor.anet_a8_current_state
-#     - sensor.anet_a8_job_percentage
-#     - sensor.anet_a8_target_bed_temp
-#     - sensor.anet_a8_actual_bed_temp
-#     - sensor.anet_a8_actual_tool0_temp
-#     - sensor.anet_a8_target_tool0_temp
-
-# =================== >> Views
-# 3d_printers_view:
-#   name: "3D Printers"
-#   view: yes
-#   entities:
-#     - device_tracker.google_maps_111184378817367767624
-#     - device_tracker.google_maps_117179315722226620815
-#     - group.aneta8_group
-#     - camera.anet_a8
-
+    
+esp8266_lights_group:
+  name: "ESP8266 Lights"
+  entities:
+    - input_number.animation_speed
+    - input_select.esp8266
+    - input_select.holiday_led_effect
+    
+sonoff_group:
+  name: Sonoffs
+  entities:
+    - switch.xmas_lights
+    - switch.window_lights
 
 
 
@@ -78,12 +70,11 @@ all_lights_view:
   view: yes
   icon: mdi:lightbulb-on-outline
   entities:
-    - input_number.animation_speed
-    - input_select.esp8266
-    - input_select.holiday_led_effect
+    - group.esp8266_lights_group
     - light.holiday_lights
     - light.kitchen_lights
     - group.hue_lights_group
+    - group.sonoff_group
     
 internet_view:
   name: Internet

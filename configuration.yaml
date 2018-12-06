@@ -22,11 +22,6 @@ config:
 
 http:
   api_password: !secret http_password
-  server_port: 443
-  #ssl_certificate: /ssl/fullchain.pem
-  #ssl_key: /ssl/privkey.pem
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
 
 updater:
 
@@ -65,6 +60,34 @@ logger:
 
 map:
 
+switch:
+   - platform: mqtt
+     command_topic: "cmnd/xmas/POWER"
+     state_topic: "stat/xmas/POWER"
+     payload_on: "ON"
+     payload_off: "OFF"
+     name: "XMas Lights"
+     optimistic: false
+     retain: true
+     
+   - platform: mqtt
+     command_topic: "cmnd/windowlights/POWER"
+     state_topic: "stat/windowlights/POWER"
+     payload_on: "ON"
+     payload_off: "OFF"
+     name: "Window Lights"
+     optimistic: false
+     retain: true
+     
+   - platform: mqtt
+     command_topic: "cmnd/SNF-POW/POWER"
+     state_topic: "stat/SNF-POW/POWER"
+     payload_on: "ON"
+     payload_off: "OFF"
+     name: "Anet A8"
+     optimistic: false
+     retain: true
+
 # fan:
 #   - platform: mqtt
 #     command_topic: "cmnd/sonoff_fan/POWER"
@@ -77,13 +100,13 @@ sun:
 
 light:
   - platform: mqtt
-    name: "Holiday Lights"
-    command_topic: "bruh/mqttstrip/setpower"
-    state_topic: "bruh/mqttstrip/setpowerpub"
-    rgb_state_topic: "bruh/mqttstrip/setcolorpub"
-    rgb_command_topic: "bruh/mqttstrip/setcolor"
-    brightness_state_topic: "bruh/mqttstrip/setbrightnesspub"
-    brightness_command_topic: "bruh/mqttstrip/setbrightness"
+    name: "Bedroom"
+    command_topic: "bruh/bedroom/setpower"
+    state_topic: "bruh/bedroom/setpowerpub"
+    rgb_state_topic: "bruh/bedroom/setcolorpub"
+    rgb_command_topic: "bruh/bedroom/setcolor"
+    brightness_state_topic: "bruh/bedroom/setbrightnesspub"
+    brightness_command_topic: "bruh/bedroom/setbrightness"
     optimistic: false
     
   - platform: mqtt
@@ -137,10 +160,9 @@ input_select:
   esp8266:
     name: ESP8266
     options:
-      - "mqttstrip"
-      - "strip2"
       - "kitchen"
-    initial: "mqttstrip"
+      - "bedroom"
+    initial: "kitchen"
     
 input_number:
   animation_speed:
@@ -148,7 +170,7 @@ input_number:
     initial: 150
     min: 1
     max: 150
-    step: 10
+    step: 5
     
 automation: 
   - alias: "Holiday Input Effect"
@@ -248,6 +270,9 @@ sabnzbd:
 
 tts:
   - platform: google
+    cache: true
+    cache_dir: /config/tts/
+    time_memory: 300
 
 mqtt:
   broker: !secret mqtt_host
@@ -256,5 +281,4 @@ mqtt:
   password: !secret mqtt_pass
 
 group: !include groups.yaml
-# automation: !include automations.yaml
 script: !include scripts.yaml

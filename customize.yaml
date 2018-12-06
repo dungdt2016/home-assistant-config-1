@@ -28,17 +28,20 @@ light.lounge_light:
 light.sams_light:
   friendly_name: Sams Light
   icon: mdi:baby-buggy
-
-# Hiding
+  
 light.gym_light_1:
-  hidden: true
+  friendly_name: Gym Light 1
+  icon: mdi:dumbbell
 
 light.gym_light_2:
-  hidden: true
+  friendly_name: Gym Light 2
+  icon: mdi:dumbbell
 
 light.gym_light_3:
-  hidden: true
+  friendly_name: Gym Light 3
+  icon: mdi:dumbbell
 
+# Hiding
 light.lounge:
   hidden: true
 
@@ -156,5 +159,14 @@ sensor.sonarr_upcoming:
   icon: mdi:calendar-range
   
 
+# ============================================================================= 
+# Switches
+# =============================================================================
 
+switch.xmas_lights:
+  friendly_name: "XMas Lights"
+  icon: mdi:pine-tree
 
+switch.window_lights:
+  friendly_name: "Bedroom Lights"
+  icon: mdi:window-closed
