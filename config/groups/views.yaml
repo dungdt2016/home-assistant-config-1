@@ -1,0 +1,19 @@
+all_lights_view:
+  name: All Lights
+  view: yes
+  icon: mdi:lightbulb-on-outline
+  entities:
+    - group.esp8266_lights_group
+    - light.holiday_lights
+    - light.kitchen_lights
+    - group.hue_lights_group
+    - group.sonoff_group
+
+internet_view:
+  name: Internet
+  icon: mdi:google-chrome
+  view: yes
+  entities:
+    - group.internet_speed_group
+    - group.sonarr_group
+    - group.sab_group

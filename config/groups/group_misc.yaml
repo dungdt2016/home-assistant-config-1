@@ -1,0 +1,5 @@
+time_group:
+  name: Date & Time
+  entities:
+    - sensor.world_clock_canada
+    - sensor.world_clock_south_africa

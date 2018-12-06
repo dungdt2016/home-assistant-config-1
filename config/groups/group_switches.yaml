@@ -1,0 +1,6 @@
+sonoff_group:
+  name: Sonoffs
+  entities:
+    - switch.xmas_lights
+    - switch.window_lights
+

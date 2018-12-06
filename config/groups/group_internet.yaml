@@ -1,0 +1,22 @@
+internet_speed_group:
+  name: Internet Speed
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+sonarr_group:
+  name: Sonarr
+  entities:
+    - sensor.sonarr_disk_space
+    - sensor.sonarr_series
+    - sensor.sonarr_upcoming
+    - sensor.sonarr_wanted
+
+sab_group:
+  name: SABnzbd
+  entities:
+    - sensor.sabnzbd_left
+    - sensor.sabnzbd_queue_count
+    - sensor.sabnzbd_speed
+    - sensor.sabnzbd_status

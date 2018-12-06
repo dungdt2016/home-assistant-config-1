@@ -1,0 +1,17 @@
+hue_lights_group:
+  name: Hue Lights
+  entities:
+    - light.deck_light
+    - light.gym
+    - light.office_light
+    - light.workbench_light
+    - light.lounge_lamp
+    - light.lounge_light
+    - light.sams_light
+
+esp8266_lights_group:
+  name: "ESP8266 Lights"
+  entities:
+    - input_number.animation_speed
+    - input_select.esp8266
+    - input_select.holiday_led_effect

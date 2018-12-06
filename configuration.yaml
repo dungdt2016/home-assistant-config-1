@@ -9,6 +9,7 @@ conversation:
 map:
 sun:
 
+group: !include_dir_merge_named config/groups
 weblink: !include config/web_links.yaml
 recorder: !include config/recorder.yaml
 history: !include config/history.yaml
@@ -26,5 +27,4 @@ zone: !include config/zones.yaml
 sabnzbd: !include config/sabnzbd.yaml
 tts: !include config/tts.yaml
 mqtt: !include config/mqtt.yaml
-group: !include config/groups.yaml
 script: !include config/scripts.yaml
