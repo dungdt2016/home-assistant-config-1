@@ -1,0 +1,8 @@
+platform: mqtt
+command_topic: "cmnd/SNF-Ender3/POWER"
+state_topic: "stat/SNF-Ender3/POWER"
+payload_on: "ON"
+payload_off: "OFF"
+name: "Ender 3"
+optimistic: false
+retain: true

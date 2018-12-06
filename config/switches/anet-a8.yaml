@@ -1,0 +1,8 @@
+platform: mqtt
+command_topic: "cmnd/SNF-POW/POWER"
+state_topic: "stat/SNF-POW/POWER"
+payload_on: "ON"
+payload_off: "OFF"
+name: "Anet A8"
+optimistic: false
+retain: true

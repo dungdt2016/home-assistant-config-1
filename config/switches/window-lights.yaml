@@ -1,0 +1,8 @@
+platform: mqtt
+command_topic: "cmnd/windowlights/POWER"
+state_topic: "stat/windowlights/POWER"
+payload_on: "ON"
+payload_off: "OFF"
+name: "Window Lights"
+optimistic: false
+retain: true

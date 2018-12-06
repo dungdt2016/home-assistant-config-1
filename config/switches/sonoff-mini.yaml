@@ -1,0 +1,8 @@
+platform: mqtt
+command_topic: "cmnd/SNF-Mini/POWER"
+state_topic: "stat/SNF-Mini/POWER"
+payload_on: "ON"
+payload_off: "OFF"
+name: "Sonoff Mini"
+optimistic: false
+retain: true

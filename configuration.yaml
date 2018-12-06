@@ -60,51 +60,7 @@ logger:
 
 map:
 
-switch:
-   - platform: mqtt
-     command_topic: "cmnd/xmas/POWER"
-     state_topic: "stat/xmas/POWER"
-     payload_on: "ON"
-     payload_off: "OFF"
-     name: "XMas Lights"
-     optimistic: false
-     retain: true
-     
-   - platform: mqtt
-     command_topic: "cmnd/windowlights/POWER"
-     state_topic: "stat/windowlights/POWER"
-     payload_on: "ON"
-     payload_off: "OFF"
-     name: "Window Lights"
-     optimistic: false
-     retain: true
-     
-   - platform: mqtt
-     command_topic: "cmnd/SNF-POW/POWER"
-     state_topic: "stat/SNF-POW/POWER"
-     payload_on: "ON"
-     payload_off: "OFF"
-     name: "Anet A8"
-     optimistic: false
-     retain: true
-     
-   - platform: mqtt
-     command_topic: "cmnd/SNF-Mini/POWER"
-     state_topic: "stat/SNF-Mini/POWER"
-     payload_on: "ON"
-     payload_off: "OFF"
-     name: "Sonoff Mini"
-     optimistic: false
-     retain: true
-     
-   - platform: mqtt
-     command_topic: "cmnd/SNF-Ender3/POWER"
-     state_topic: "stat/SNF-Ender3/POWER"
-     payload_on: "ON"
-     payload_off: "OFF"
-     name: "Ender 3"
-     optimistic: false
-     retain: true
+switch: !include_dir_list config/switches
 
 # fan:
 #   - platform: mqtt
