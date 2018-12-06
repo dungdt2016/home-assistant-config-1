@@ -1,0 +1,7 @@
+name: Home
+latitude: !secret location_latitude
+longitude: !secret location_longitude
+elevation: 0
+unit_system: metric
+time_zone: Canada/Mountain
+customize: !include customize.yaml

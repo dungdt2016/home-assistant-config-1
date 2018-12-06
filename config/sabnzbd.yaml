@@ -1,0 +1,8 @@
+host: !secret sab_host
+port: !secret sab_port
+api_key: !secret sab_api
+sensors:
+  - current_status
+  - speed
+  - queue_remaining
+  - queue_count

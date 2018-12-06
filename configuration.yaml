@@ -1,11 +1,4 @@
-homeassistant:
-  name: Home
-  latitude: !secret location_latitude
-  longitude: !secret location_longitude
-  elevation: 0
-  unit_system: metric
-  time_zone: Canada/Mountain
-  customize: !include customize.yaml
+homeassistant: !include config/homeassistant.yaml
 
 frontend:
 
@@ -20,8 +13,7 @@ recorder:
 
 config:
 
-http:
-  api_password: !secret http_password
+http: !include config/http.yaml
 
 updater:
 
@@ -29,48 +21,14 @@ discovery:
 
 conversation:
 
-history:
-  exclude:
-    entities:
-      - sensor.world_clock_canada
-      - sensor.world_clock_south_africa
-      - light.lounge
-      - light.workbench
-      - light.bedroom
-      - light.deck
-      - light.dining_room
-      - light.office
-      - light.sams_room
-      - sensor.last_boot
-      - sensor.yr_symbol
-    domains:
-      - group
-
-logbook:
-  exclude:
-    entities:
-      - sensor.world_clock_south_africa
-      - sensor.world_clock_canada
-      - light.bedroom_light
-      - light.bedroom
-
-logger:
-  default: debug
-  #homeassistant.components.websocket_api: warning
-
 map:
 
-switch: !include_dir_list config/switches
-
-# fan:
-#   - platform: mqtt
-#     command_topic: "cmnd/sonoff_fan/POWER"
-#     state_topic: "cmnd/sonoff_fan/POWER"
-#     payload_on: "ON"
-#     payload_off: "OFF"
-#     name: "Bedroom Fan"
-
 sun:
+
+history: !include config/history.yaml
+logbook: !include config/logbook.yaml
+logger: !include config/logger.yaml
+switch: !include_dir_list config/switches
 
 light:
   - platform: mqtt
@@ -216,43 +174,11 @@ sensor:
       - diskspace
     unit: GB
       
-weather:
-  - platform: darksky
-    api_key: !secret darksky_api
-    
-device_tracker:
-  - platform: google_maps
-    username: !secret google_user
-    password: !secret google_pass
-    
-zone:
-  - name: Gym
-    latitude: 53.5301052
-    longitude: -113.2932228
-    radius: 150
-    icon: mdi:dumbbell
-    
-sabnzbd:
-  host: !secret sab_host
-  port: !secret sab_port
-  api_key: !secret sab_api
-  sensors:
-    - current_status
-    - speed
-    - queue_remaining
-    - queue_count
-
-tts:
-  - platform: google
-    cache: true
-    cache_dir: /config/tts/
-    time_memory: 300
-
-mqtt:
-  broker: !secret mqtt_host
-  port: !secret mqtt_port
-  username: !secret mqtt_user
-  password: !secret mqtt_pass
-
-group: !include groups.yaml
-script: !include scripts.yaml
+weather: !include config/weather.yaml
+device_tracker: !include config/device_tracker.yaml
+zone: !include config/zones.yaml
+sabnzbd: !include config/sabnzbd.yaml
+tts: !include config/tts.yaml
+mqtt: !include config/mqtt.yaml
+group: !include config/groups.yaml
+script: !include config/scripts.yaml

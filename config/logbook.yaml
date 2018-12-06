@@ -1,0 +1,6 @@
+exclude:
+  entities:
+    - sensor.world_clock_south_africa
+    - sensor.world_clock_canada
+    - light.bedroom_light
+    - light.bedroom
