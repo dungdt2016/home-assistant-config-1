@@ -1,0 +1,39 @@
+alias: "Christmas Lights (Turn On)"
+initial_state: True
+hide_entity: False
+
+trigger:
+  - platform: sun
+    event: sunset
+    offset: "-0:10:00"
+
+action:
+  - service: tts.google_say
+    data:
+      entity_id:
+        - media_player.lounge_speaker
+        - media_player.bedroom_speaker
+        - media_player.gym_speaker
+      message: Turning on Christmas lights
+  
+  - service: switch.turn_on
+    data:
+      entity_id:
+        - switch.window_lights
+        - switch.xmas_lights
+        - switch.sonoff_mini
+  
+  - delay: 00:00:20
+  
+  - service: tts.google_say
+    data:
+      entity_id:
+        - media_player.lounge_speaker
+        - media_player.bedroom_speaker
+        - media_player.gym_speaker
+      message: Setting bedroom LED pattern to Holly Jolly
+
+  - service: mqtt.publish
+    data_template:
+      topic: "bruh/bedroom/seteffect"
+      payload: 'Holly Jolly'

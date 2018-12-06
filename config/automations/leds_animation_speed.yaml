@@ -1,9 +1,11 @@
-alias: "Animation Speed"
+alias: "LEDS - Set Animation Speed"
 initial_state: True
 hide_entity: False
+
 trigger:
   - platform: state
     entity_id: input_number.animation_speed
+
 action:
   - service: mqtt.publish
     data_template:
