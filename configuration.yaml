@@ -28,3 +28,5 @@ sabnzbd: !include config/sabnzbd.yaml
 tts: !include config/tts.yaml
 mqtt: !include config/mqtt.yaml
 script: !include config/scripts.yaml
+octoprint: !include config/octoprint.yaml
+camera: !include config/camera.yaml

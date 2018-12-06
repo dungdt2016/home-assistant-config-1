@@ -1,2 +1,2 @@
 default: debug
-#homeassistant.components.websocket_api: warning
+homeassistant.components.websocket_api: warning

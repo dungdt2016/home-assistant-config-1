@@ -27,3 +27,12 @@ speakers_view:
     - media_player.gym_speaker
     - media_player.lounge_speaker
     - media_player.sams_room_speaker
+
+printers_view:
+  name: "3D Printers"
+  icon: mdi:printer-3d
+  view: yes
+  entities:
+    - group.anet_a8_temps_group
+    - group.anet_a8_job_group
+    - camera.anet_a8

@@ -1,0 +1,15 @@
+anet_a8_temps_group:
+  name: "Anet A8 Temps"
+  entities:
+    - sensor.anet_a8_current_state
+    - binary_sensor.anet_a8_printing_error
+    - sensor.anet_a8_actual_tool0_temp
+    - sensor.anet_a8_target_tool0_temp
+
+anet_a8_job_group:
+  name: "Anet A8 Current Job"
+  entities:
+    - binary_sensor.anet_a8_printing
+    - sensor.anet_a8_time_elapsed
+    - sensor.anet_a8_time_remaining
+    - sensor.anet_a8_job_percentage

@@ -1,0 +1,5 @@
+- host: !secret octoprint_a8_host
+  port: !secret octoprint_a8_port
+  api_key: !secret octoprint_a8_api
+  name: "Anet A8"
+  number_of_tools: 1
