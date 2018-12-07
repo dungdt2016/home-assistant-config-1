@@ -1,10 +1,10 @@
-alias: "Christmas Lights (Turn Off)"
+alias: "Lights - Bedroom (Off)"
 initial_state: True
 hide_entity: False
 
 trigger:
-  - platform: sun
-    event: sunrise
+  - platform: time
+    at: '20:30:00'
 
 action:
   - service: tts.google_say
@@ -12,12 +12,9 @@ action:
       entity_id:
         - media_player.lounge_speaker
         - media_player.bedroom_speaker
-        - media_player.gym_speaker
-      message: Turning off Christmas lights
+      message: Turning off bedroom window lights
   
   - service: switch.turn_off
     data:
       entity_id:
         - switch.window_lights
-        - switch.xmas_lights
-        - switch.sonoff_mini
