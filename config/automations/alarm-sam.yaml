@@ -1,0 +1,43 @@
+alias: "Alarm - Sam Weekday"
+initial_state: True
+hide_entity: False
+
+trigger:
+  - platform: time
+    at: '06:45:00'
+
+# https://www.home-assistant.io/docs/scripts/conditions/
+condition:
+  condition: time
+  after: '06:30:00'
+  before: '07:00:00'
+  weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+
+action:
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.sams_light
+
+  - delay: 00:00:05
+
+  - service: tts.google_say
+    data:
+      entity_id:
+        - media_player.sams_room_speaker
+        - media_player.lounge_speaker
+      message: Time to get up little sausage
+
+  - delay: 00:00:10
+
+  - service: tts.google_say
+    data:
+      entity_id:
+        - media_player.sams_room_speaker
+        - media_player.lounge_speaker
+      message: Are you up little one?
