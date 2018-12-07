@@ -1,0 +1,10 @@
+alias: "TTS - Clear Cache"
+initial_state: True
+hide_entity: False
+
+trigger:
+  - platform: time
+    at: '21:00:00'
+  
+action:
+  - service: tts.clear_cache
