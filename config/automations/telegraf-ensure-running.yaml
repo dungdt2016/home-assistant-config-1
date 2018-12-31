@@ -1,0 +1,13 @@
+alias: "Ensure Telegraf is running"
+initial_state: True
+hide_entity: False
+
+trigger:
+  - platform: time
+    minutes: '/10'
+    seconds: 00
+  
+action:
+  - service: hassio.addon_start
+    data:
+      addon: d6a446b3_telegraf
