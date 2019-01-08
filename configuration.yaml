@@ -8,6 +8,10 @@ discovery:
 conversation:
 map:
 sun:
+shopping_list:
+
+lovelace:
+  mode: yaml
 
 group: !include_dir_merge_named config/groups
 weblink: !include config/web_links.yaml

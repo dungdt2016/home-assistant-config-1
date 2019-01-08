@@ -29,17 +29,9 @@ light.sams_light:
   friendly_name: Sams Light
   icon: mdi:baby-buggy
   
-light.gym_light_1:
-  friendly_name: Gym Light 1
-  icon: mdi:dumbbell
-
-light.gym_light_2:
-  friendly_name: Gym Light 2
-  icon: mdi:dumbbell
-
-light.gym_light_3:
-  friendly_name: Gym Light 3
-  icon: mdi:dumbbell
+light.dining_room_light:
+  friendly_name: Dining Room
+  icon: mdi:ceiling-light
 
 # Hiding
 light.lounge:
