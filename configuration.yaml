@@ -30,3 +30,4 @@ mqtt: !include config/mqtt.yaml
 script: !include config/scripts.yaml
 octoprint: !include config/octoprint.yaml
 camera: !include config/camera.yaml
+binary_sensor: !include_dir_list config/binary_sensors

@@ -1,0 +1,6 @@
+doors_group:
+  name: Doors
+  entities:
+    - binary_sensor.front_door
+    - binary_sensor.garage_door
+    - binary_sensor.back_door

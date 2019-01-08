@@ -1,0 +1,7 @@
+platform: mqtt
+name: "Garage Door"
+state_topic: "tele/RF_Bridge/RESULT"
+payload_on: "79A206"
+payload_off: "79A206OFF"
+device_class: door
+value_template: '{{ value_json.RfReceived.Data }}'
