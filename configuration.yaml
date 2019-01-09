@@ -13,6 +13,19 @@ shopping_list:
 lovelace:
   mode: yaml
 
+alarm_control_panel:
+  platform: alarmdotcom
+  username: !secret alarm_user
+  password: !secret alarm_pass
+  code: !secret alarm_code
+
+influxdb:
+  host: !secret influx_host
+  port: !secret influx_port
+  database: !secret influx_db
+  tags:
+    host: hass
+  
 group: !include_dir_merge_named config/groups
 weblink: !include config/web_links.yaml
 recorder: !include config/recorder.yaml
