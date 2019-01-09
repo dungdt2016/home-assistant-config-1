@@ -56,6 +56,10 @@ influxdb:
     - icon
     - supported_features
     - device_class
+    - attribution
+    - server_country
+    - server_id
+    - server_name
   # exclude:
   #   entities:
   #     - sensor.sonarr_wanted
