@@ -23,6 +23,52 @@ influxdb:
   host: !secret influx_host
   port: !secret influx_port
   database: !secret influx_db
+  default_measurement: state
+  include:
+    entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping
+      - sensor.sabnzbd_left
+      - sensor.sabnzbd_queue_count
+      - sensor.sabnzbd_speed
+      - light.deck_light
+      - light.dining_room_light
+      - light.gym_light_1
+      - light.gym_light_2
+      - light.gym_light_3
+      - light.lounge_light
+      - light.office_light
+      - light.sams_light
+      - light.workbench_light
+      - sensor.processor_use
+      - sensor.memory_use_percent
+      - sensor.network_in_eth0
+      - sensor.network_out_eth0
+      - binary_sensor.back_door
+      - binary_sensor.front_door
+      - binary_sensor.garage_door
+      - sensor.disk_use_percent_config
+      - binary_sensor.anet_a8_printing
+  tags_attributes:
+    - friendly_name
+    - unit_of_measurement
+    - icon
+    - supported_features
+    - device_class
+  # exclude:
+  #   entities:
+  #     - sensor.sonarr_wanted
+  #     - sensor.sonarr_disk_space
+  #     - sensor.sonarr_series
+  #     - sensor.sonarr_upcoming
+  #     - light.bedroom
+  #   domains:
+  #     - automation
+  #     - weblink
+  #     - group
+  #     - alarm_control_panel
+  #     - camera
   tags:
     host: hass
   
