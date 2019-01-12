@@ -1,0 +1,5 @@
+platform: mqtt
+name: "Lounge Temperature (BMP180)"
+state_topic: "tele/esp_lounge/SENSOR"
+unit_of_measurement: '°C'
+value_template: "{{ value_json.BMP180.Temperature }}"

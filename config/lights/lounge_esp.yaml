@@ -1,0 +1,15 @@
+platform: mqtt
+name: "Lounge ESP Light"
+state_topic: "stat/esp_lounge/RESULT"
+state_value_template: "{{ value_json.POWER }}"
+command_topic: "cmnd/esp_lounge/POWER"
+brightness_state_topic: "stat/esp_lounge/RESULT"
+brightness_command_topic: "cmnd/esp_lounge/Dimmer"
+brightness_value_template: "{{ value_json.Dimmer }}"
+rgb_state_topic: "stat/esp_lounge/RESULT"
+rgb_command_topic: "cmnd/esp_lounge/Color"
+rgb_value_template: "{{ value_json.Color }}"
+payload_on: "ON"
+payload_off: "OFF"
+optimistic: false
+brightness_scale: 100

@@ -1,0 +1,9 @@
+lounge_esp_group:
+  name: Lounge ESP
+  entities:
+    - binary_sensor.lounge_esp_light_state
+    - light.lounge_esp_light
+    - sensor.lounge_humidity
+    - sensor.lounge_preassure
+    - sensor.lounge_temperature_bmp180
+    - sensor.lounge_temperature_dht11

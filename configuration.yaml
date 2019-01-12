@@ -54,6 +54,10 @@ influxdb:
       - binary_sensor.garage_door
       - sensor.disk_use_percent_config
       - binary_sensor.anet_a8_printing
+      - sensor.lounge_humidity
+      - sensor.lounge_preassure
+      - sensor.lounge_temperature_bmp180
+      - sensor.lounge_temperature_dht11
   tags_attributes:
     - friendly_name
     - unit_of_measurement
