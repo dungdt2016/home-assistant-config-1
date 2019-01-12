@@ -12,3 +12,5 @@ plex\.conf
 \.google_maps_location_sharing\.cookies
 known_devices\.yaml
 \.storage/
+
+\.ring_cache\.pickle

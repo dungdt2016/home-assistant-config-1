@@ -1,0 +1,6 @@
+group_ring:
+  name: Ring
+  entities:
+    - binary_sensor.ring_front_door_ding
+    - binary_sensor.ring_front_door_motion
+    - camera.front_door

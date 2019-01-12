@@ -2,3 +2,5 @@
   name: "Anet A8"
   still_image_url: !secret octoprint_a8_still
   mjpeg_url: !secret octoprint_a8_stream
+
+- platform: ring

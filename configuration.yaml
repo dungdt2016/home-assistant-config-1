@@ -19,6 +19,10 @@ alarm_control_panel:
   password: !secret alarm_pass
   code: !secret alarm_code
 
+ring:
+  username: !secret ring_user
+  password: !secret ring_pass
+
 influxdb:
   host: !secret influx_host
   port: !secret influx_port
