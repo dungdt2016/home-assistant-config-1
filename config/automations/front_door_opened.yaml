@@ -1,0 +1,21 @@
+alias: "Front Door Opened"
+initial_state: True
+hide_entity: False
+
+trigger:
+  - platform: mqtt
+    topic: tele/RF_Bridge/RESULT
+
+# https://www.home-assistant.io/docs/scripts/conditions/
+# https://www.home-assistant.io/docs/configuration/templating/
+# https://community.home-assistant.io/t/automation-trigger-mqtt-platform-with-value-template-for-payload/80444
+
+condition:
+  condition: template
+  value_template: "{{ trigger.payload_json['RfReceived']['Data'] == 'B82346' }}"
+
+action:
+  - service: tts.google_say
+    data:
+      entity_id: media_player.gym_speaker
+      message: Front door open
