@@ -39,6 +39,18 @@ switch.kitchen_lights:
   friendly_name: Kitchen Lights
   icon: mdi:food-fork-drink
 
+light.hue_white_lamp_1:
+  friendly_name: 3D Printer
+  icon: mdi:printer-3d
+
+switch.test:
+  friendly_name: Bedroom LEDs
+  icon: mdi:window-closed
+
+switch.front_lights:
+  friendly_name: Front Lights
+  icon: mdi:door-closed
+
 # Hiding
 light.lounge:
   hidden: true

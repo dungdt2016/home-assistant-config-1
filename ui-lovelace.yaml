@@ -41,17 +41,14 @@ views:
           - light.gym
           - light.dining_room_light
           - light.hue_white_lamp_1
-          - light.kitchen_lights
           - light.lounge_light
           - light.lounge_lamp
           - light.office_light
           - light.sams_light
           - light.workbench_light
-          - light.lounge
           - switch.kitchen_lights
           - switch.test
-          - switch.window_lights
-          - switch.xmas_lights
+          - switch.front_lights
 
       - type: entities
         title: Gym Lights
