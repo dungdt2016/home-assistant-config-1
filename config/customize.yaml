@@ -4,7 +4,7 @@
 # Lights 
 # ============================================================================= 
 light.gym:
-  friendly_name: Gym Lights
+  friendly_name: Gym
   icon: mdi:dumbbell
 
 light.deck_light:
@@ -12,7 +12,7 @@ light.deck_light:
   icon: mdi:floor-plan
 
 light.workbench_light:
-  friendly_name: Workbench Light
+  friendly_name: Workbench
   icon: mdi:settings
 
 light.office_light:
@@ -24,7 +24,7 @@ light.lounge_lamp:
   icon: mdi:floor-lamp
 
 light.lounge_light:
-  friendly_name: Lounge Overhead
+  friendly_name: Lounge
   icon: mdi:television-classic
 
 light.sams_light:
@@ -36,7 +36,7 @@ light.dining_room_light:
   icon: mdi:ceiling-light
 
 switch.kitchen_lights:
-  friendly_name: Kitchen Lights
+  friendly_name: Kitchen
   icon: mdi:food-fork-drink
 
 light.hue_white_lamp_1:
@@ -48,7 +48,7 @@ switch.test:
   icon: mdi:window-closed
 
 switch.front_lights:
-  friendly_name: Front Lights
+  friendly_name: Front
   icon: mdi:door-closed
 
 # Hiding

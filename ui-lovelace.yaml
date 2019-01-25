@@ -57,21 +57,73 @@ views:
   - title: Lights
     icon: mdi:lightbulb-on-outline
     cards:
-      - type: entities
-        title: Hue Lights
-        entities:
-          - light.deck_light
-          - light.gym
-          - light.dining_room_light
-          - light.hue_white_lamp_1
-          - light.lounge_light
-          - light.lounge_lamp
-          - light.office_light
-          - light.sams_light
-          - light.workbench_light
-          - switch.kitchen_lights
-          - switch.test
-          - switch.front_lights
+      - type: markdown
+        content: >
+          ## Core Light Controls
+
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: light.deck_light
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: light.gym
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: light.dining_room_light
+            tap_action:
+              action: toggle
+
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: light.hue_white_lamp_1
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: light.lounge_light
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: light.lounge_lamp
+            tap_action:
+              action: toggle
+
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: light.office_light
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: light.sams_light
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: light.workbench_light
+            tap_action:
+              action: toggle
+
+      - type: horizontal-stack
+        cards:
+          - type: entity-button
+            entity: switch.kitchen_lights
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: switch.test
+            tap_action:
+              action: toggle
+          - type: entity-button
+            entity: switch.front_lights
+            tap_action:
+              action: toggle
+
+      - type: markdown
+        content: >
+          ## Tweak specific lights
 
       - type: entities
         title: Gym Lights
