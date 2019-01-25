@@ -10,6 +10,29 @@ views:
   - title: Home
     icon: mdi:home
     cards:
+      - type: entity-filter
+        show_empty: false
+        entities:
+          - light.deck_light
+          - light.gym
+          - light.dining_room_light
+          - light.hue_white_lamp_1
+          - light.lounge_light
+          - light.lounge_lamp
+          - light.office_light
+          - light.sams_light
+          - light.workbench_light
+          - switch.kitchen_lights
+          - switch.test
+          - switch.front_lights
+        state_filter:
+          - "on"
+        card: 
+          type: glance
+          title: Running Lights
+          show_state: false
+          columns: 4
+
       - type: entities
         title: Location Tracking
         entities:
@@ -90,9 +113,6 @@ views:
       - type: media-control
         entity: media_player.bedroom_speaker
       
-      - type: media-control
-        entity: media_player.cast_tv7912
-
       - type: media-control
         entity: media_player.gym_speaker
       
