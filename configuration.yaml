@@ -73,19 +73,6 @@ influxdb:
     - server_country
     - server_id
     - server_name
-  # exclude:
-  #   entities:
-  #     - sensor.sonarr_wanted
-  #     - sensor.sonarr_disk_space
-  #     - sensor.sonarr_series
-  #     - sensor.sonarr_upcoming
-  #     - light.bedroom
-  #   domains:
-  #     - automation
-  #     - weblink
-  #     - group
-  #     - alarm_control_panel
-  #     - camera
   tags:
     host: hass
   

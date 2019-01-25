@@ -3,9 +3,8 @@ initial_state: True
 hide_entity: False
 
 trigger:
-  - platform: time
+  - platform: time_pattern
     minutes: '/10'
-    seconds: 00
   
 action:
   - service: hassio.addon_start
