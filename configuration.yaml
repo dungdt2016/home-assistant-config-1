@@ -10,6 +10,11 @@ map:
 sun:
 shopping_list:
 
+wemo:
+  discovery: false
+  static:
+    - 10.0.0.19
+
 lovelace:
   mode: yaml
 

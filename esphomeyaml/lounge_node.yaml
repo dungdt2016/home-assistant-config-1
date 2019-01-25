@@ -1,0 +1,98 @@
+esphomeyaml:
+  name: lounge_node
+  platform: ESP8266
+  board: d1_mini
+  # includes:
+  #   - my_custom_sensor.h
+  # libraries:
+  #   - "Adafruit BMP085 Library"
+
+wifi:
+  ssid: 'ItHurtsWhenIP'
+  password: 'Qu1ks1lv3r$$'
+  
+# i2c:
+#   sda: D2
+#   scl: D1
+#   scan: False
+  
+mqtt:
+  broker: 10.0.0.104
+  port: 1883
+  username: hass
+  password: 7ECzqharJpFkAt6PfC6sRdsCZgmspbsXWnPsD76X
+  client_id: lounge_node
+  reboot_timeout: 0s
+  
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: D8
+      inverted: true
+    name: "Test Switch"
+    filters:
+      - heartbeat: 60s
+    device_class: door
+    
+  - platform: status
+    name: "Living Room Status"
+    
+sensor:
+  - platform: wifi_signal
+    name: "WiFi Signal Sensor"
+    update_interval: 60s
+    
+  - platform: uptime
+    name: Uptime
+    update_interval: 15s
+    filters:
+    
+  # - platform: dht
+  #   pin: D0
+  #   temperature:
+  #     name: "Living Room Temperature"
+  #   humidity:
+  #     name: "Living Room Humidity"
+  #   update_interval: 30s
+  #   model: DHT11
+    
+switch:
+  - platform: restart
+    name: "Living Room Restart"
+    
+text_sensor:
+  - platform: version
+    name: "Esphomelib Version"
+    
+light:
+  - platform: fastled_clockless
+    chipset: WS2811
+    pin: D5
+    num_leds: 1
+    rgb_order: GRB
+    name: "FastLED WS2811 Light"
+    
+#  - platform: custom
+#    lambda: |-
+#      auto my_sensor = new MyCustomSensor();
+#      App.register_component(my_sensor);
+#      return {my_sensor->temperature_sensor, my_sensor->pressure_sensor};
+#    sensors:
+#      - name: "My Custom Temperature Sensor"
+#        unit_of_measurement: °C
+#        accuracy_decimals: 1
+#      - name: "My Custom Pressure Sensor"
+#        unit_of_measurement: hPa
+#        accuracy_decimals: 2
+
+# Enable logging
+logger:
+  #level: VERY_VERBOSE
+  level: INFO
+
+# Enable Home Assistant API
+#api:
+#  password: 'password'
+
+ota:
+  password: 'password'

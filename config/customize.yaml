@@ -1,3 +1,5 @@
+# https://materialdesignicons.com/
+
 # ============================================================================= 
 # Lights 
 # ============================================================================= 
@@ -32,6 +34,10 @@ light.sams_light:
 light.dining_room_light:
   friendly_name: Dining Room
   icon: mdi:ceiling-light
+
+switch.kitchen_lights:
+  friendly_name: Kitchen Lights
+  icon: mdi:food-fork-drink
 
 # Hiding
 light.lounge:

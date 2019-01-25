@@ -8,7 +8,8 @@ hue_lights_group:
     - light.lounge_lamp
     - light.lounge_light
     - light.sams_light
-    - light.dining_room
+    - light.dining_room_light
+    - switch.kitchen_lights
 
 esp8266_lights_group:
   name: "ESP8266 Lights"
